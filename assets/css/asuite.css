@@ -1,0 +1,101 @@
+/*!
+ * 
+ * A-Suite Theme
+ * Copyright 2015 a-suite.com.
+ * 
+ */
+a {
+  color: #fb3348;
+}
+hr.colored {
+	border-color: #fb3348;
+}
+.text-primary {
+    color: #fb3348;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fb3348;
+}
+.navbar-default {
+    background-color: #fb3348;
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top.navbar-expanded {
+    padding: 0px 0;
+  }
+}
+.navbar-expanded img{
+	display: none;
+	-webkit-transition:.5s;
+	-moz-transition:.5s;
+	transition: .5s;
+}
+header .brand-name-subsubtext {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    font-style: italic;
+}
+header .brand-name-k {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+}
+header .brand-name-t {
+    font-size: 8px;
+    font-weight: 300;
+    font-style: italic;
+}
+@media(min-width:768px) {
+    header .brand-name-subsubtext {
+        font-size: 24px;
+        line-height: 30px;
+        font-style: italic;
+    }
+    header .brand-name-k {
+        font-size: 24px;
+        font-style: italic;
+    }
+    header .brand-name-t {
+        font-size: 12px;
+        font-style: italic;
+    }
+}
+.testimonials .testimonials-carousel .owl-controls .owl-prev,
+.testimonials .testimonials-carousel .owl-controls .owl-next {
+  background-color: #fb3348 !important;
+}
+.about-carousel .owl-controls .owl-prev,
+.about-carousel .owl-controls .owl-next {
+  background-color: #fb3348 !important;
+}
+.portfolio-carousel .owl-controls .owl-prev,
+.portfolio-carousel .owl-controls .owl-next {
+  background-color: #fb3348 !important;
+}
+.portfolio-filter #filters li .filter.active {
+  background-color: #fb3348;
+  border-color: #fb3348;
+}
+#portfoliolist .portfolio .portfolio-wrapper .caption .caption-bg {
+  background: #fb3348;
+}
+.floating-label-form-group-with-focus label {
+  color: #fb3348;
+}
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: #fb3348;
+}
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  color: #fb3348;
+}
+.btn-full-width:hover {
+  background-color: #fb3348;
+}

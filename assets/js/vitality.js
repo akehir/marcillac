@@ -1,22 +1,23 @@
 /*!
- * Vitality v1.3.2 (http://themes.startbootstrap.com/vitality-v1.3.2)
- * Copyright 2014 Start Bootstrap Themes.
- * Licensed at WrapBootstrap, visit WrapBootstrap to purchase a usage license for this theme (https://wrapbootstrap.com/)
+ * Vitality v1.3.3 (http://themes.startbootstrap.com/vitality-v1.3.3)
+ * Copyright 2013-2015 Start Bootstrap Themes
+ * To use this theme you must have a license purchased at WrapBootstrap (https://wrapbootstrap.com)
  */
 
-// Smooth Scrolling: Smooth scrolls to an ID on the current page.
-$(function() {
-    $('a').bind('click', function(event) {
+(function($) {
+    "use strict"; // Start of use strict
+
+    // Smooth Scrolling: Smooth scrolls to an ID on the current page.
+    // To use this feature, add a link on your page that links to an ID, and add the .page-scroll class to the link itself. See the docs for more details.
+    $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
-});
 
-// Activates floating label headings for the contact form.
-$(function() {
+    // Activates floating label headings for the contact form.
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
     }).on("focus", ".floating-label-form-group", function() {
@@ -24,80 +25,79 @@ $(function() {
     }).on("blur", ".floating-label-form-group", function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
-});
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
 
-// Owl Carousel Settings
-$(".about-carousel").owlCarousel({
-    items: 3,
-    navigation: true,
-    pagination: false,
-    navigationText: [
-        "<i class='fa fa-angle-left'></i>",
-        "<i class='fa fa-angle-right'></i>"
-    ],
-});
+    // Owl Carousel Settings
+    $(".about-carousel").owlCarousel({
+        items: 3,
+        navigation: true,
+        pagination: false,
+        navigationText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
+        ],
+    });
 
-$(".portfolio-carousel").owlCarousel({
-    singleItem: true,
-    navigation: true,
-    pagination: false,
-    navigationText: [
-        "<i class='fa fa-angle-left'></i>",
-        "<i class='fa fa-angle-right'></i>"
-    ],
-    autoHeight: true,
-    mouseDrag: false,
-    touchDrag: false,
-    transitionStyle: "fadeUp"
-});
+    $(".portfolio-carousel").owlCarousel({
+        singleItem: true,
+        navigation: true,
+        pagination: false,
+        navigationText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
+        ],
+        autoHeight: true,
+        mouseDrag: false,
+        touchDrag: false,
+        transitionStyle: "fadeUp"
+    });
 
-$(".testimonials-carousel").owlCarousel({
-    singleItem: true,
-    navigation: true,
-    pagination: true,
-    autoHeight: true,
-    navigationText: [
-        "<i class='fa fa-angle-left'></i>",
-        "<i class='fa fa-angle-right'></i>"
-    ],
-    transitionStyle: "backSlide"
-});
+    $(".testimonials-carousel").owlCarousel({
+        singleItem: true,
+        navigation: true,
+        pagination: true,
+        autoHeight: true,
+        navigationText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
+        ],
+        transitionStyle: "backSlide"
+    });
 
-$(".portfolio-gallery").owlCarousel({
-    items: 3,
-});
+    $(".portfolio-gallery").owlCarousel({
+        items: 3,
+    });
 
-// Magnific Popup jQuery Lightbox Gallery Settings
-$('.gallery-link').magnificPopup({
-    type: 'image',
-    gallery: {
-        enabled: true
-    },
-    image: {
-        titleSrc: 'title'
-    }
-});
+    // Magnific Popup jQuery Lightbox Gallery Settings
+    $('.gallery-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        image: {
+            titleSrc: 'title'
+        }
+    });
 
-// Formstone Wallpaper - Video Background Settings
-$("header.video").wallpaper({
-    source: {
-        poster: "assets/img/bg-mobile-fallback.jpg",
-        mp4: "assets/mp4/camera.mp4"
-    }
-});
+    // Formstone Wallpaper - Video Background Settings
+    $("header.video").wallpaper({
+        source: {
+            poster: "assets/img/bg-mobile-fallback.jpg",
+            mp4: "assets/mp4/camera.mp4"
+        }
+    });
 
-// Scrollspy: Highlights the navigation menu items while scrolling.
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
+    // Scrollspy: Highlights the navigation menu items while scrolling.
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    })
 
-// Portfolio Filtering Scripts & Hover Effect
-$(function() {
+    // Portfolio Filtering Scripts & Hover Effect
     var filterList = {
         init: function() {
 
@@ -141,7 +141,8 @@ $(function() {
     };
 
     filterList.init();
-});
+
+})(jQuery); // End of use strict
 
 // Load WOW.js on non-touch devices
 var isPhoneDevice = "ontouchstart" in document.documentElement;
